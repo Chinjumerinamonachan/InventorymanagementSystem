@@ -1,0 +1,2 @@
+# InventorymanagementSystem
+Django project
