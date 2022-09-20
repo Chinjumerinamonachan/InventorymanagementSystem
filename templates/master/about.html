@@ -1,0 +1,72 @@
+{% extends 'base.html' %} 
+{% block title %} about {% endblock%} 
+{% block content%} 
+{% load static%}
+
+<section class="container text-center">
+  <div class="row">
+    <div>
+      <img
+        src=" {% static 'image/PC MAN LOGO.png' %}"
+        alt="notes image"
+        style="height: 640px"
+      />
+    </div>
+  </div>
+</section>
+<section>
+  <div class="about-section">
+    <h1>About Us</h1>
+    <p>Some text about who we are and what we do.</p>
+    <p>
+      Resize the browser window to see that this page is responsive by the way.
+    </p>
+  </div>
+
+  <h2 style="text-align: center">Our Team</h2>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <img src="{% static 'image/about4.jpg' %}" alt="Jane" style="width: 100%" />
+        <div class="container">
+          <h2>Jane Doe</h2>
+          <p class="title">CEO & Founder</p>
+          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <p>jane@example.com</p>
+          <p><button class="button" type="button">
+           <a href="">Contact</a> </button></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card">
+        <img src="{% static 'image/about3.jpg' %}" alt="Mike" style="width: 100%" />
+        <div class="container">
+          <h2>Mike Ross</h2>
+          <p class="title">Art Director</p>
+          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <p>mike@example.com</p>
+          <p><button class="button" type="button">
+            <a href="">Contact</a> </button></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card">
+        <img src="{% static 'image/about2.jpg' %}" alt="John" style="width: 100%" />
+        <div class="container">
+          <h2>John Doe</h2>
+          <p class="title">Designer</p>
+          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <p>john@example.com</p>
+          <p><button class="button" type="button">
+            <a href="">Contact</a> </button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

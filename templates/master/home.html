@@ -1,0 +1,525 @@
+{% extends 'base.html' %}
+{% block title %} home{% endblock%}
+{% block content %}
+{% load static%}
+
+
+<div class="container-fluid" style="height: calc(100vh - 56px);">
+    <div class="row">
+        <div class="col p-0">
+            <div id="carouselExampleCaptions" class="carousel slide" >
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="{% static 'image/PC MAN LOGO.png' %}" class="d-block w-100 custom-img" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <!-- <h3>First slide label</h3>
+                            <p>Some representative placeholder content for the first slide.</p> -->
+                        </div>
+                    </div>
+                    <!-- <div class="carousel-item">
+                        <img src="{% static 'image/im5.jpeg' %}" class="d-block w-100 custom-img" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>Second slide label</h3>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'image/im2.png' %}" class="d-block w-100 custom-img" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3 class="">Third slide label</h3>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Banner end-->
+
+<div>
+
+<!-- products listing start -->
+<section class="min-vh-100" id="products">
+    <div class="container h-100">
+        <div class="row sticky-top bg-white">
+            <div class="col py-3">
+                <h2>Products</h2>
+                <div class="hr"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-3">
+                <div class="card shadow-sm">
+                    <a href="#details">
+                        <img src="{% static 'image/pi1.jpg' %}" href="#details" class="card-img-top border" alt="...">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title fw-normal">Acer Chromebook </h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of
+                            the card's content.</p>
+                        <p class="card-text fw-normal">&#x20b9; 37990.00/-</p>
+                        <div class="rating mb-3 text-warning">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <a href="#payment" class="btn btn-outline-dark">
+                            <i class="fa-solid fa-cart-plus me-2"></i>
+                            Add to cart
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-3">
+                <div class="card shadow-sm">
+                    <a href="#details">
+
+                        <img src="{% static 'image/pi2.jpg' %}" class="card-img-top border" alt="...">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title fw-normal">Asus Vivobook</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of
+                            the card's content.</p>
+                        <p class="card-text fw-normal">&#x20b9; 36990.00/-</p>
+                        <div class="rating mb-3 text-warning">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <a href="#payment" class="btn btn-outline-dark">
+                            <i class="fa-solid fa-cart-plus me-2"></i>
+                            Add to cart
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-3">
+                <div class="card shadow-sm">
+                    <a href="#details">
+                        <img src="{% static 'image/pi3.jpg' %}" class="card-img-top border" alt="...">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title fw-normal">Acer Aspire 5</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of
+                            the card's content.</p>
+                        <p class="card-text fw-normal">&#x20b9; 49990.00/-</p>
+                        <div class="rating mb-3 text-warning">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <a href="#payment" class="btn btn-outline-dark">
+                            <i class="fa-solid fa-cart-plus me-2"></i>
+                            Add to cart
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-3">
+                <div class="card shadow-sm">
+                    <a href="#details">
+                        <img src="{% static 'image/pi4.jpg' %}" class="card-img-top border" alt="...">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title fw-normal">Apple Macbook</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of
+                            the card's content.</p>
+                        <p class="card-text fw-normal">&#x20b9; 122900.00/-</p>
+                        <div class="rating mb-3 text-warning">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <a href="#payment" class="btn btn-outline-dark">
+                            <i class="fa-solid fa-cart-plus me-2"></i>
+                            Add to cart
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-3">
+                <div class="card shadow-sm">
+                    <a href="#details">
+                        <img src="{% static 'image/pi10.jpg' %}" class="card-img-top border" alt="...">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title fw-normal">Apple iPhone 12</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of
+                            the card's content.</p>
+                        <p class="card-text fw-normal">&#x20b9; 58499.00/-</p>
+                        <div class="rating mb-3 text-warning">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <a href="#payment" class="btn btn-outline-dark">
+                            <i class="fa-solid fa-cart-plus me-2"></i>
+                            Add to cart
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-3">
+                <div class="card shadow-sm">
+                    <a href="#details">
+                        <img src="{% static 'image/Pi9.jpg' %}" class="card-img-top border" alt="...">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title fw-normal">Oppo F21 Pro </h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of
+                            the card's content.</p>
+                        <p class="card-text fw-normal">&#x20b9; 26999.00/-</p>
+                        <div class="rating mb-3 text-warning">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <a href="#payment" class="btn btn-outline-dark">
+                            <i class="fa-solid fa-cart-plus me-2"></i>
+                            Add to cart
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div></div>
+            <div class="col-lg-3 col-md-6 mb-3">
+                <div class="card shadow-sm">
+                    <a href="#details">
+                        <img src="{% static 'image/pi8.jpg' %}" class="card-img-top border" alt="...">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title fw-normal">Realme GT 2 Pro</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of
+                            the card's content.</p>
+                        <p class="card-text fw-normal">&#x20b9; 49999.00/-</p>
+                        <div class="rating mb-3 text-warning">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <a href="#payment" class="btn btn-outline-dark">
+                            <i class="fa-solid fa-cart-plus me-2"></i>
+                            Add to cart
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-3">
+                <div class="card shadow-sm">
+                    <a href="#details">
+                        <img src="{% static 'image/Pi7.jpg' %}" class="card-img-top border" alt="...">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title fw-normal">Samsung Galaxy A53 5G</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of
+                            the card's content.</p>
+                        <p class="card-text fw-normal">&#x20b9; 34499.00/-</p>
+                        <div class="rating mb-3 text-warning">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <a href="#payment" class="btn btn-outline-dark">
+                            <i class="fa-solid fa-cart-plus me-2"></i>
+                            Add to cart
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-3">
+                <div class="card shadow-sm">
+                    <a href="#details">
+                        <img src="{% static 'image/pi5.jpg' %}" class="card-img-top border" alt="...">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title fw-normal">HP Webcam 480p W100<h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up
+                                    the bulk
+                                    of
+                                    the card's content.</p>
+                                <p class="card-text fw-normal">&#x20b9; 1299.00/-</p>
+                                <div class="rating mb-3 text-warning">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                </div>
+                                <a href="#payment" class="btn btn-outline-dark">
+                                    <i class="fa-solid fa-cart-plus me-2"></i>
+                                    Add to cart
+                                </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-3">
+                <div class="card shadow-sm">
+                    <a href="#details">
+                        <img src="{% static 'image/pi6.jpg' %}" class="card-img-top border" alt="...">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title fw-normal">HP Webcam 1080p W300</h5>
+
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of
+                            the card's content.</p>
+                        <p class="card-text fw-normal">&#x20b9; 4599.00/-</p>
+                        <div class="rating mb-3 text-warning">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <a href="#payment" class="btn btn-outline-dark">
+                            <i class="fa-solid fa-cart-plus me-2"></i>
+                            Add to cart
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+<!-- products listing end -->
+<!-- product details view -->
+<section class="min-vh-100" id="details">
+    <div class="container h-100">
+        <div class="row sticky-top bg-white">
+            <div class="col py-3">
+                <h2>Product Details</h2>
+                <div class="hr"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <table>
+                        <tr>
+                            <td>Ethernet LAN</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>HDMI</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Display</td>
+                            <td>15.6 inches</td>
+                        </tr>
+                        <tr>
+                            <td>OS</td>
+                            <td>Windows 11 / 64 Bit</td>
+                        </tr>
+                        <tr>
+                            <td>Weight</td>
+                            <td>1.75kg</td>
+                        </tr>
+                        <!-- <tr><td>Graphic Momery</td><td>Intel UHD Graphics</td></tr> -->
+                        <!-- <tr><td>Imported By</td><td>HP India Sales Pvt.Ltd.24,Salarpuria Arena Hosur Main Rd.Adugodi Bangalore-560030</td></tr> -->
+                    </table>
+
+                </div>
+                <div class="col order-5">
+                    <table>
+                        <tr>
+                            <td>Bluetooth</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>WebCamera</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Dp Type</td>
+                            <td>Departmental</td>
+                        </tr>
+                        <tr>
+                            <td>Colour</td>
+                            <td>Black</td>
+                        </tr>
+                        <tr>
+                            <td>RAM</td>
+                            <td>8Gb</td>
+                        </tr>
+
+                    </table>
+                </div>
+                <div class="col order-1">
+                    <table>
+                        <tr>
+                            <td>SSD</td>
+                            <td>256GB</td>
+                        </tr>
+                        <tr>
+                            <td>WiFi</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>USB</td>
+                            <td>Thunder bolt ports</td>
+                        </tr>
+                        <tr>
+                            <td>Display Type</td>
+                            <td>Retina</td>
+                        </tr>
+                        <tr>
+                            <td>Processor</td>
+                            <td>MIchip</td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+</section>
+
+
+<!-- signup -->
+<section class="min-vh-100" id="signup">
+    <div class="container h-100">
+        <div class="row sticky-top bg-white">
+            <div class="col py-3">
+                <h2>Signup</h2>
+                <div class="hr"></div>
+            </div>
+        </div>
+        <form class="row g-3">
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">FullName</label>
+                <input type="email" class="form-control" id="inputEmail4">
+            </div>
+            <div class="col-md-6">
+                <label for="inputPassword4" class="form-label">Phone/Mobile</label>
+                <input type="password" class="form-control" id="inputPassword4">
+            </div>
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <input type="email" class="form-control" id="inputEmail4">
+            </div>
+            <div class="col-md-6">
+                <label for="inputPassword4" class="form-label">Password</label>
+                <input type="password" class="form-control" id="inputPassword4">
+            </div>
+            <div class="col-12">
+                <label for="inputAddress" class="form-label">Address</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            </div>
+            <div class="col-12">
+                <label for="inputAddress2" class="form-label">Address 2</label>
+                <input type="text" class="form-control" id="inputAddress2"
+                    placeholder="Apartment, studio, or floor">
+            </div>
+            <div class="col-md-6">
+                <label for="inputCity" class="form-label">City</label>
+                <input type="text" class="form-control" id="inputCity">
+            </div>
+            <div class="col-md-4">
+                <label for="inputState" class="form-label">State</label>
+                <select id="inputState" class="form-select">
+                    <option selected>Choose...</option>
+                    <option>...</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label for="inputZip" class="form-label">Zip</label>
+                <input type="text" class="form-control" id="inputZip">
+            </div>
+            <div class="col-12">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <label class="form-check-label" for="gridCheck">
+                        Check me out
+                    </label>
+                </div>
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Sign up</button>
+            </div>
+        </form>
+</section>
+<!-- login -->
+<section class="min-vh-100  " id="login">
+    <div class="container h-100">
+        <div class="row sticky-top bg-white">
+            <div class="col py-3">
+                <h2>Login</h2>
+                <div class="hr"></div>
+            </div>
+        </div>
+
+        <form>
+            <div class="row mb-3">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="inputEmail3" style="width:300px ;">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inputPassword3" style="width:300px ;">
+                </div>
+            </div>
+
+
+            <div class="row mb-3">
+                <div class="col-sm-10 offset-sm-2">
+
+                    <a href="#">Forgot Password</a>
+
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Sign in</button>
+        </form>
+    </div>
+</section>
+
+
+
+{% endblock %}

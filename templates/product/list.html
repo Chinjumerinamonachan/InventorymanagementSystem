@@ -1,0 +1,89 @@
+{% extends "base.html" %} {% block content %}
+<div class="container">
+  <div
+    class="row row-cols-lg-3 g-2 g-lg-3 justify-content-center align-items-center py-5"
+  >
+    {% for product in products %}
+    <div class="col">
+      <div class="card shadow-sm mb-3">
+        <img src="{{product.image.url}}" alt="..." class="card-img-top" />
+        <div class="card-body">
+          <h5 class="card-title">{{product.name}}</h5>
+          <p class="card-text">{{product.price}}</p>
+          <p class="card-text">{{product.description}}</p>
+          <p class="card-text">{{product.category}}</p>
+          <p class="card-text">{{product.available}}</p>
+          <p class="card-text">{{product.unit}}</p>
+          <div class="link-group">
+            <ul class="list-group list-group-flush list-group-horizontal">
+              {% if user.is_superuser %}
+
+              <li class="list-group-item">
+                <a
+                  href="{% url 'product:update' product.id %}"
+                  class="btn btn-info"
+                  >Update</a
+                >
+              </li>
+              <li class="list-group-item">
+                <a
+                  href="{% url 'product:delete' product.id %}"
+                  class="btn btn-danger"
+                  >Delete</a
+                >
+              </li>
+              <li class="list-group-item">
+                <a
+                  href="{% url 'product:detail' product.id %}"
+                  class="btn btn-info"
+                  >Detail</a
+                >
+              </li>
+              <li class="list-group-item">
+                <form action="{% url 'product:add_to_cart' %}" method="post">
+                  {% csrf_token %}
+                  <input type="hidden" name="product_id" value="{{product.id}}">
+                  <input type="number" class="form-control" min="1" name="quantity" value="1">
+                  <button type="submit" class="btn btn-primary">Add To Cart</button>
+                </form>
+                
+              </li>
+              {%  else %}
+              <li class="list-group-item">
+                <form action="{% url 'product:add_to_cart' %}" method="post">
+                  {% csrf_token %}
+                  <input type="hidden" name="product_id" value="{{product.id}}">
+                  <input type="number" class="form-control" min="1" name="quantity" value="1">
+                  <button type="submit" class="btn btn-primary">Add To Cart</button>
+                </form>
+                
+              </li>
+            
+
+              {% endif %}
+              
+
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% empty %}
+    <div class="col">
+      <div class="card shadow-sm mb-3">
+        <img src="{{product.image.url}}" alt="..." class="card-img-top" />
+        <div class="card-body">
+          <h5 class="card-title">Nothing to show!</h5>
+          <p class="card-text">{{product.description}}</p>
+          <p class="card-text">{{product.duration}}</p>
+          <div>
+            <a href="#" class="btn btn-primary">Add To Cart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
