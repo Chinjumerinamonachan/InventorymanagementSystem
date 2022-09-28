@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
-
+{%  load static %}
 {% block content %}
-<section class="min-vh-100" id="signup">
+<section class="min-vh-100 background" id="signup">
     
-    <div class="container h-100">
-        <div class="row sticky-top bg-white">
+    <div class="container h-100 ">
+        <div class="row sticky-top background">
             <div class="col py-3">
                 <h2 >Signup</h2>
                 <div class="hr"></div>
@@ -12,11 +12,11 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-6">
-                    <div class="card shadow-sm">
-                        <div class="card-body">
+                    <div class="card shadow-sm login">
+                        <div class="card-body ">
                             <form action="" method="post">
                                 {% csrf_token %} {{form.as_p}}
-        <button class="btn btn-primary">Signup</button>
+                                    <button class="btn btn-primary">Signup</button>
 
                             </form>
 

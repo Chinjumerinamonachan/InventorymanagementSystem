@@ -1,4 +1,6 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %} 
+{% load static %}
+{% block content %}
 <div class="container">
   <div
     class="row row-cols-lg-3 g-2 g-lg-3 justify-content-center align-items-center py-5"
@@ -16,7 +18,7 @@
           <p class="card-text">{{product.unit}}</p>
           <div class="link-group">
             <ul class="list-group list-group-flush list-group-horizontal">
-              {% if user.is_superuser %}
+              <!-- {% if user.is_superuser %} -->
 
               <li class="list-group-item">
                 <a
@@ -39,7 +41,7 @@
                   >Detail</a
                 >
               </li>
-              <li class="list-group-item">
+              <!-- <li class="list-group-item">
                 <form action="{% url 'product:add_to_cart' %}" method="post">
                   {% csrf_token %}
                   <input type="hidden" name="product_id" value="{{product.id}}">
@@ -57,10 +59,10 @@
                   <button type="submit" class="btn btn-primary">Add To Cart</button>
                 </form>
                 
-              </li>
+              </li> -->
             
 
-              {% endif %}
+              <!-- {% endif %} -->
               
 
               
